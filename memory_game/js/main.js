@@ -36,7 +36,10 @@ var flipCard = function(e){
 	console.log(cardId)
 	cardsInPlay.push(cards[cardId].rank);
 	e.setAttribute("src",cards[cardId].cardImage)
-	checkForMatch();
+	if (cardsInPlay.length === 2) {
+		checkForMatch();
+	}
+	
 
 	 console.log("User flipped " + cards[cardId].rank + " image path: " + cards[cardId].cardImage + " suit: " + cards[cardId].suit)
 
